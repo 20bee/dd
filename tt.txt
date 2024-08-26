@@ -1,0 +1,407 @@
+-----circumference and area------
+
+#include <stdio.h> // include header file to the code
+#define PI 3.14 //define a constant
+int main (){ //main function starts executing
+ float rad, circ, area; //declare variables
+ printf("Enter radius of the circle: "); //ask user to enter radius
+ scanf("%f", &rad); //read and assign it to value in rad variable
+ circ = 2 * PI * rad; //calculate circumference and assign to circ variable
+ area = PI * rad * rad; //calculate area assign to area variable
+ printf("Circumference of the circle: %.2f\nArea of the circle: %.2f", circ, area); //print
+values
+ return 0; //exits from main function
+}
+
+
+----characters in a reverse----
+
+#include<stdio.h>
+int main(){
+ char character1 = 'X';
+ char character2 = 'M';
+ char character3 = 'L';
+ printf("The reverse of %c%c%c is %c%c%c",character1, character2,
+character3, character3, character2, character1);
+ return 0;
+}
+
+
+----Multiply 3 values, get user input-----
+
+#include <stdio.h> //include header file to the code
+int main(){ //main function starts execution
+int a, b, c; //declare the variables
+printf("Enter first value: "); //print as “enter first value:”
+scanf("%d",&a); //read the input value and assign it to variable a
+printf("Enter second value: "); //print as “enter second value:”
+scanf("%d",&b); //read values insert by user & store in b
+printf("Enter third value: "); //print as “enter second value:”
+scanf("%d",&c); //read values insert by user & store in c
+printf("Multiplication of all no:%d", a*b*c);//print multiplied value of a,b & c
+return 0; //exit from the main program
+}
+
+
+-----convert Celsius into Fahrenheit-----
+
+#include <stdio.h> // include header file to the code
+int main(){ // main function starts executing
+ int x, y; // declare variable
+ printf("Enter value 1: "); // ask user to enter first value
+ scanf("%d", &x); // read the first value and assign it to x
+ printf("Enter value 2: "); // ask user to enter second value
+ scanf("%d", &y); // read the second value and assign it to y
+ printf("result value:%d\nreminder value:%d", x/y, x%y); //
+ return 0; //exits from the main function
+}
+
+
+------ even or odd.----
+
+#include <stdio.h>
+int main() {
+ int no;
+ printf("Enter a value : ");
+ scanf("%d", &no); //read the input and assign to the variable
+ if(no % 2 == 0){ // check whether the condition is true
+ printf("%d is an even number", no);//print this statement if above condition is true
+ }
+ if(no % 2 == 1){ // check whether the condition is true
+ printf("%d is an odd number", no); //print this statement if above condition is true
+ }
+ return 0;
+}
+
+----leap year or not---
+
+#include <stdio.h>
+int main()
+{
+int year;
+printf("enter year : ");
+scanf("%d",&year);
+if (((year % 4 == 0) && (year % 100 != 0 ))||(year % 400 == 0)) /* check whether the
+condition is true*/
+{
+ printf("%d is a leap year", year); //print this statement if above condition is true
+}
+else //execute if above condition fails
+{
+ printf("%d is not a leap year", year);
+}
+return 0;
+}
+
+
+-----grade of results----
+
+#include <stdio.h> //including the input output header file
+int main() //main function start execute from here
+{
+ int marks; //declaring variables
+ printf("enter your marks=\n"); //print the words inside the double quotations
+ scanf("%d",&marks); // read the input value and store in the variable
+ if(marks>=70 && marks<=100){ /*if condition, check whether the condition is
+true or false*/
+ printf("grade A"); //print the words inside the double quotations
+ }
+ else if (marks>=55 && marks<=69) { /*if condition, check whether the
+condition is true or false*/
+ printf("grade B"); //print the words inside the double quotations
+ }
+ else if (marks>=40 && marks<=54){ /*if condition, check whether the
+condition is true or false*/
+ printf("grade C"); //print the words inside the double quotations
+ }
+ else if (marks>=30 && marks<=39){ /*if condition, check whether the
+condition is true or false*/
+ printf("grade D"); //print the words inside the double quotations
+ }
+ else if (marks>0 && marks<=29){ /*if condition, check whether the condition is
+true or false*/
+ printf("grade E"); //print the words inside the double quotations
+ }
+ return 0; //end executing the program
+}
+
+
+
+-------calculator using a switch case------
+
+#include<stdio.h> //including the input output header file
+int main(){ //main function start execute from here
+ char sign; //declaring variables
+ float n1, n2; //declaring variables
+ printf("Enter the the operation to do: "); /*print the words inside the double
+quotations*/
+ scanf("%c", &sign); // read the input value and store in the variable
+ printf("Enter the first number to calculate: "); /*print the words inside the
+double quotations*/
+ scanf("%f", &n1); // read the input value and store in the variable
+ printf("Enter the second number to calculate: "); /*print the words inside the
+double quotations*/
+ scanf("%f", &n2); // read the input value and store in the variable
+switch(sign){ /*switch statement check whether the variable inside the
+bracket is equal to the value in each case statement belong to this
+switch statement.*/
+case '+': /*the value in front of the case statement will be checked by the
+switch statement and the below statements will be executed.*/
+printf("Answer = %.2f", n1 + n2); /*do the calculations and prints the
+output*/
+break; /*When a break statement is encountered inside a loop, the loop is
+immediately terminated and the program control resumes at the
+next statement of the loop*/
+case '-': /*the value in front of the case statement will be checked by the
+switch statement and the below statements will be executed.*/
+printf("Answer = %.2f", n1 - n2); /*do the calculations and prints the
+output*/
+break; /*When a break statement is encountered inside a loop, the loop is
+immediately terminated and the program control resumes at the
+next statement of the loop*/
+case '*': /*the value in front of the case statement will be checked by the
+switch statement and the below statements will be executed.*/
+printf("Answer = %.2f", n1 * n2); /*do the calculations and prints the
+output*/
+ break; /*When a break statement is encountered inside a loop, the loop is
+immediately terminated and the program control resumes at the
+next statement of the loop*/
+case '/': /*the value in front of the case statement will be checked by the
+switch statement and the below statements will be executed.*/
+printf("Answer = %.2f", n1 / n2); /*do the calculations and prints the
+output*/
+break; /*When a break statement is encountered inside a loop, the loop is
+immediately terminated and the program control resumes at the
+next statement of the loop*/
+ default: /*if the value in switch variable not equal to any of the case values,
+then this statement will execute*/
+printf("Operation not supported!"); /*print the words inside the double
+quotations*/
+ }
+ return 0; //end executing the program
+}
+
+
+----*
+   ***
+  *****----
+
+#include <stdio.h>
+int main()
+{
+ int i, j, N; //declaring variable
+ N = 5;
+ for( i = 1; I <= N; i++) // repeat through rows
+ {
+ // repeat through columns
+ for(j = 1; j <= N; j++) //execute till the condition satisfy
+ {
+ printf("*"); // Print star in the each column
+ }
+ printf("\n"); //goto to the next line/row
+ }
+ return 0;
+}
+
+
+---sort (ascending order) array----
+
+//declaring the headre file
+#include<stdio.h>
+//main function
+int main()
+{
+ //declaring variables
+ int i;
+ //declaring and initialize arrays
+ int arr[10] = {10, 9, 7, 101, 23, 44, 12, 78, 34, 23};
+ //printing the array before sort
+ for(i = 0; i < 10; i++){
+ printf("%d ", arr[i]);
+ }
+ printf("\n\narray after sort in ascending order:\n");
+ //call the sort function
+ sort(arr);
+ //print the output after sorting the array
+ for(i = 0; i < 10; i++){
+ printf("%d ", arr[i]);
+ }
+ //print a new line
+ printf("\n");
+}
+//sort function
+int sort(int *arr)
+{
+ //declaring variables
+ int i, j, temp;
+ //sort the array into ascending order
+ for(i = 0; i < 9; i++)
+ {
+ for(j = 0; j < 10 - i - 1; j++)
+ {
+ //shift the values according to ascending order
+ if(arr[j] > arr[j + 1])
+ {
+ temp = arr[j];
+ arr[j] = arr[j + 1];
+ arr[j + 1] = temp;
+ }
+ }
+ }
+}
+
+
+----copy elements of the “source [10]” array to “copy [10]” array using pointers---
+
+//including header file
+#include<stdio.h>
+//main function
+int main(){
+ //declaring varibles
+ int i;
+ //declaring arrays
+ int source[10];
+ int copy[10];
+ //get the iputs from the user and store in the array
+ printf("Enter 10 elements to the array:\n");
+ for(i = 0; i < 10; i++){
+ scanf("%d", &source[i]);
+ }
+ //print the elements you entered
+ printf("\nElements you entered to the array:\n");
+ for(i = 0; i < 10; i++){
+ printf("%d\t", source[i]);
+ }
+ //declaring and initializing pointers
+ int *ptr1 = &source;
+ int *ptr2 = &copy;
+ //print
+ printf("\n\nCoping the elements...\n\n");
+ //coping the arrays by using pointers
+ for(i = 0; i < 10; i++){
+ ptr2[i] = ptr1[i];
+ }
+ //print the copied array using pointers
+ printf("Elements copied to copy array:\n");
+ for(i = 0; i < 10; i++){
+ printf("%d\t", ptr2[i]);
+ }
+ printf("\n");
+ return 0;
+}
+
+
+--- factorial of n----
+
+//include header file
+#include <stdio.h>
+//declaring function
+int factorial(int val);
+int main()
+{
+ //declaring variables
+ int n;
+ //get the input from the user
+ printf("Enter a positive integer to find the factorial: ");
+ scanf("%d",&n);
+ //call the function by the printf command
+ printf("\nFactorial of %d is %d\n", n, factorial(n));
+ return 0;
+}
+//function to find the factorial
+int factorial(int val)
+{
+ //calculate the factorial from recursion and return to the main function
+ if(val > 0)
+ {
+ return val * factorial(val - 1);
+ }
+ //other wise return 1 to the main function
+ else
+ {
+ return 1;
+ }
+}
+
+
+----- Add Two Distances (in inch-feet system) using Structures------
+
+#include <stdio.h>
+struct distance
+{
+ int disFeet;
+ int disInch;
+};
+int main()
+{
+ struct distance dis1, dis2, total;
+ printf("Enter 1st distance\n");
+ printf("Enter feet: ");
+ scanf("%d", &dis1.disFeet);
+ printf("Enter inch: ");
+ scanf("%d", &dis1.disInch);
+ printf("\nEnter 2nd distance\n");
+ printf("Enter feet: ");
+ scanf("%d", &dis2.disFeet);
+ printf("Enter inch: ");
+ scanf("%d", &dis2.disInch);
+ total.disFeet = dis1.disFeet + dis2.disFeet;
+ total.disInch = dis1.disInch + dis2.disInch;
+ while(total.disInch >= 12){
+ total.disFeet++;
+ total.disInch -= 12;
+ }
+ printf("\n\nSum of distances = %d\' %d\"", total.disFeet, total.disInch);
+ return 0;
+}
+
+
+---srilanka pattern---
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "SRILANKA";
+    int len = strlen(str);
+
+    for (int i = 1; i <= len; i++) {
+        for (int j = 0; j < i; j++) {
+            printf("%c", str[j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+-----triangle numbers----
+
+#include <stdio.h>
+
+int triangularNumber(int n) {
+    if (n == 1)
+        return 1;
+    else
+        return n + triangularNumber(n - 1);
+}
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    printf("Triangular number of %d is: %d\n", n, triangularNumber(n));
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
